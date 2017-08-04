@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.container{
+				height: 100%;
+				width: 100%;
+				/*background-color: orangered;*/
+				position:fixed;
+				overflow: scroll;
+				min-width: 200px;
+			}
+			.title{
+				display: flex;
+				flex-flow: row;
+				height: 50px;
+				border-top: 1px solid orangered;
+				margin-top: 1px;
+				align-items: center;
+				background-color: white;
+				box-shadow: 0px 0px 50px lightgrey;
+			}
+			.title_logo{
+				width: 100px;
+				height: 30px;
+				margin-left: 5px;
+				background: url(logo.PNG);
+				/*background-position: center;*/
+				background-size: cover;
+			}
+			.title_search{
+				margin-left: 15px;
+				width: 50%;
+			}
+			.title_search input{
+				width: 230px;
+				background: url(392443304.jpg) no-repeat;
+				background-position: right;
+				background-size: contain;
+				background-color: #EEEEEE;
+				border-radius: 5px;
+			}
+			.title_menu{
+				display: flex;
+				flex-flow: row;
+				/*justify-content: flex-end;*/
+				align-items: center;
+			}
+			.title_menu_icon{
+				display: flex;
+				flex-flow: row;
+				align-items: center;
+				justify-content: flex-end;
+				color: lightgrey;
+				font-size: smaller;
+			}
+			.title_menu_icon img{
+				height: 30px;
+				width: 30px;
+			}
+			.title_menu_log{
+				margin-left: 20px;
+			}
+			.title_menu a{
+				text-decoration: none;
+				color: #D3D3D3;
+			}
+			.insight{
+				margin-left: 20px ;
+				flex-grow: 1;
+				/*background-color: #D3D3D3;*/
+				display: flex;
+				flex-flow: row;
+			}
+			.insight_left{
+				width: 10%;
+				text-align: center;
+				display: flex;
+				flex-flow: column;
+			}
+			.insight_left_group{
+				color: black;
+				font-size: larger;
+				margin-top: 20px;
+			}
+			.insight_left_group:hover{
+				background-color: orangered;
+				color: #FFFDE7;
+			}
+			.insight_center{
+				width: 65%;
+				margin-left: 20px;
+				display: flex;
+				flex-flow: column;
+			}
+			.insight_center_picture{
+				margin:10px 10px 10px 0px;
+				width:100%;
+				height: 300px;
+				background: url(90eb2137ly1fi4lya69ldj20m90csk2s.jpg) no-repeat;
+				background-size: cover;
+				
+			}
+			.insight_center_news{
+				display: flex;
+				flex-flow: column;
+			}
+			.news_group{
+				width: 100%;
+				display: flex;
+				flex-flow: row;
+				margin-bottom: 20px;
+			}
+			.news_group_left{
+				width: 100px;
+				height: 100px;
+			}
+			.news_group_left img{
+				width: 100px;
+				height: 100px;
+			}
+			.news_group_right{
+				display: flex;
+				flex-flow: column;
+			}
+			.news_group_right_title{
+				font-weight: bold;
+			}
+			.insight_right{
+				display: flex;
+				flex-flow: column;
+				width: 25%;
+				margin: 10px;
+			}
+			.login{
+				height: 340px;
+				background-color: lightgray ;
+				display: flex;
+				flex-flow: column;
+				justify-content: space-around;
+			}
+			.login_window{
+				height: 300px;
+				margin: 0px 10px 0px 10px;
+				background: whitesmoke;
+				display: flex;
+				flex-flow: column;
+				/*justify-content: space-between;*/
+			}
+			.window_group{
+				display: flex;
+				flex-flow: row;
+				margin: 20px;
+				justify-content: center;
+			}
+			.login_window_title{
+				height: 60px;
+				width: 50%;
+				align-items:center ;
+				text-align: center;
+				border-bottom: 2px solid orangered;
+				padding-bottom: 5px;
+			}
+			.window_group input{
+				width: 100%;
+				text-align: center;
+			}
+			.login_window_button{
+				width: 80%;
+				height: 50px;
+				background-color: orange;
+				text-align: center;
+				line-height: 50px;
+			}
+			.login_window_button:hover{
+				background-color: darkorange;
+				
+			}
+			.insight_right_adver{
+				display: flex;
+				flex-flow: column;
+				margin-top: 20px;
+				background-color: #EEEEEE;
+				border-top: 1px solid orangered;
+			}
+			.adver_title{
+				font-weight: 600;
+				font-size: larger;
+				background-color: lightgray;
+			}
+			.adver_group{
+				height: 100px;
+				background-color: whitesmoke;
+				display: flex;
+				flex-flow: row;
+				margin:20px 0px 0px 0px;
+			}
+			.adver_group_left{
+				width: 100px;
+				height: 100px;
+				background:url(u=2393945959,4212635627&fm=200&gp=0.jpg) no-repeat;
+				background-size: cover;
+			}
+			.adver_group_right{
+				display: flex;
+				flex-flow: column;
+			}
+			.adver_group_right a{
+				text-decoration: none;
+				color: #000000;
+			}
+			.adver_group_right_content{
+				margin: 5px;
+				font-size: smaller;
+				color: #BDBDBD;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				<div class="title_logo"></div>
+				<div class="title_search">
+					<input placeholder="大家都在搜 小米6"/>
+				</div>
+				<div class="title_menu">
+					<div class="title_menu_icon"><img src="首页-首页.png"/>首页</div>
+					<div class="title_menu_icon"><img src="视频.png"/>视频</div>
+					<div class="title_menu_icon"><img src="发现.png"/>发现</div>
+					<div class="title_menu_icon"><img src="游戏 (1).png"/>游戏</div>
+					<a href="#" class="title_menu_log">登录</a>
+					<div class="title_menu_log">|</div>
+					<a href="#" class="title_menu_log">注册</a>
+				</div>
+			</div>
+		<div class="insight">
+				<div class="insight_left">
+					<div class="insight_left_group">热门</div>
+					<div class="insight_left_group">明星</div>
+					<div class="insight_left_group">视屏</div>
+					<div class="insight_left_group">头条</div>
+					<div class="insight_left_group">榜单</div>
+					<div class="insight_left_group">搞笑</div>
+					<div class="insight_left_group">社会</div>
+					<div class="insight_left_group">情感</div>
+					<div class="insight_left_group">时尚</div>
+					<div class="insight_left_group">军事</div>
+					<div class="insight_left_group">美女</div>
+					<div class="insight_left_group">体育</div>
+					<div class="insight_left_group">动漫</div>
+				</div>
+				<div class="insight_center">
+					<div class="insight_center_picture"></div>
+					<div class="insight_center_news">
+						<div class="news_group">
+							<div class="news_group_left">
+								<img src="u=143851667,1506559367&fm=26&gp=0.jpg"/>
+							</div>
+							<div class="news_group_right">
+								<div class="news_group_right_title">王力宏半夜发布新专辑称这是他生涯中最好的一张</div>
+								<div class="news_group_right_content">3123123123</div>
+							</div>
+						</div>
+						<div class="news_group">
+							<div class="news_group_left">
+								<img src="u=143851667,1506559367&fm=26&gp=0.jpg"/>
+							</div>
+							<div class="news_group_right">
+								<div class="news_group_right_title">王力宏半夜发布新专辑称这是他生涯中最好的一张</div>
+								<div class="news_group_right_content">3123123123</div>
+							</div>
+						</div>
+						<div class="news_group">
+							<div class="news_group_left">
+								<img src="u=143851667,1506559367&fm=26&gp=0.jpg"/>
+							</div>
+							<div class="news_group_right">
+								<div class="news_group_right_title">王力宏半夜发布新专辑称这是他生涯中最好的一张</div>
+								<div class="news_group_right_content">3123123123</div>
+							</div>
+						</div>
+						<div class="news_group">
+							<div class="news_group_left">
+								<img src="u=143851667,1506559367&fm=26&gp=0.jpg"/>
+							</div>
+							<div class="news_group_right">
+								<div class="news_group_right_title">王力宏半夜发布新专辑称这是他生涯中最好的一张</div>
+								<div class="news_group_right_content">3123123123</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="insight_right">
+					<div class="login">
+						<div class="login_window">
+							<div class="window_group">
+								<div class="login_window_title" style="border-bottom: 5px solid orangered;">账号登录</div>
+								<div class="login_window_title">安全登录</div>
+							</div>
+							<div class="window_group">
+								<input placeholder="用户名/邮箱/手机号" />
+							</div>
+							<div class="window_group">
+								<input placeholder="请输入密码" />
+							</div>
+							<div class="window_group">
+								<div class="login_window_button">登录</div>
+							</div>
+						</div>
+					</div>
+					<div class="insight_right_adver">
+						<div class="adver_title">
+							微博新鲜事
+						</div>
+						<div class="adver_group">
+							<div class="adver_group_left"></div>
+							<div class="adver_group_right">
+								<a href="#" class="adver_group_right_title">玩滑板，去新东方，包教包会包分配</a>
+								<div class="adver_group_right_content">滑板成为年轻人最好的一种娱乐方式，现在......</div>
+							</div>
+						</div>
+						<div class="adver_group">
+							<div class="adver_group_left"></div>
+							<div class="adver_group_right">
+								<a href="#" class="adver_group_right_title">玩滑板，去新东方，包教包会包分配</a>
+								<div class="adver_group_right_content">滑板成为年轻人最好的一种娱乐方式，现在......</div>
+							</div>
+						</div>
+						<div class="adver_group">
+							<div class="adver_group_left"></div>
+							<div class="adver_group_right">
+								<a href="#" class="adver_group_right_title">玩滑板，去新东方，包教包会包分配</a>
+								<div class="adver_group_right_content">滑板成为年轻人最好的一种娱乐方式，现在......</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
